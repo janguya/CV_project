@@ -29,13 +29,11 @@ latest_masks = []
 THUMB_SIZE = 64
 THUMB_MARGIN = 10
 
-
 def draw_delete_icon(frame, x, y):
     center = (x + 8, y + 8)
     cv2.circle(frame, center, 9, (0, 0, 255), -1)
     cv2.line(frame, (x + 5, y + 5), (x + 11, y + 11), (255, 255, 255), 2)
     cv2.line(frame, (x + 11, y + 5), (x + 5, y + 11), (255, 255, 255), 2)
-
 
 def draw_filter_button(frame, x, y, mode):
     color = [(50, 50, 50), (255, 255, 255), (200, 200, 255), (0, 255, 255)][mode % 4]
